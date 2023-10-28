@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup page</title>
+</head>
+<body bgcolor="white">
+    <div id="box">
+        <h1>Signup</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Signup</button>
+            <a href="{% url 'loginurl' %}">Already have an account?</a>
+        </form>
+    </div>
+</body>
+</html>
